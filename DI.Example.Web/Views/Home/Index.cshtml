@@ -1,0 +1,25 @@
+﻿@model DI.Example.Web.Models.ExampleEntitiesViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+
+
+    @foreach (var item in Model.ExampleEntities)
+    { 
+    <tr>
+
+        <td>ID:</td>
+        <td>@item.Id</td>
+        <td>Name:</td>
+        <td>@item.Name</td>
+        <td>@Html.ActionLink( "Details", "Details",  new { id = item.Id } )</td>
+    </tr>
+    }
+
+</table>
+
